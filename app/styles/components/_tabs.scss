@@ -1,0 +1,47 @@
+.add{background: #333; padding: 10%; height: 300px;}
+
+.nav-sidebar { 
+    width: 100%;
+    padding: 30px 0; 
+    border-right: 1px solid #ddd;
+    .nav{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        justify-content:center;
+        li >  a{
+            padding: 20px;
+        }
+        @media(min-width: $screen-md){
+            flex-direction:column;
+            li{
+                cursor: pointer;
+                background: transparent;
+                margin:  0;
+                text-align: right;
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 3px 8px 0 rgba(0, 0, 0, 0.03);
+                -webkit-transition: all 0.08s linear;
+                -moz-transition: all 0.08s linear;
+                -o-transition: all 0.08s linear;
+                transition: all 0.08s linear;
+                a{
+                    padding: 10px;
+                }
+                &:hover{
+                    background: rgba(black,0.05);
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}

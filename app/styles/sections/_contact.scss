@@ -1,0 +1,17 @@
+
+
+#contact-us{
+    height: 200px;
+    color: white;
+    background: rgba(black,0.2);
+}
+#location{
+	font-size: 0.9rem;
+	#map{
+		// width: 100%;
+		height: 300px;
+		@media(min-width: $screen-sm){
+			height: 600px;
+		}
+	}
+}

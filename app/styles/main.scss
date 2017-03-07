@@ -1,0 +1,64 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+
+@import "commons/variables";
+@import "components/card";
+@import "components/header";
+@import "components/tabs";
+@import "sections/home";
+@import "sections/contact";
+@import "sections/techniques";
+
+
+body{
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    @media(min-width: $screen-md){
+        padding-top: 80px;
+        font-size: 1.6rem;
+    }
+}
+
+address {
+   line-height: 1.2;
+}
+legend{
+    line-height: 1;
+}
+
+.fluid-container{
+    overflow: hidden;
+}
+
+.video{
+    height: 350px;
+
+
+}
+video { 
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    min-width: 100%;
+    min-height: 350px;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%);
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    @media(min-width: $screen-md){
+        min-height: 700px;
+    }
+}
+.stopfade { 
+   opacity: .5;
+}

@@ -1,0 +1,165 @@
+
+.header{
+    align-items: center;
+    background: rgba(#31798f,1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    height: $header-xs;
+    justify-content: space-between;
+    padding: 0 30px; 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+
+    -webkit-transition: all 0.45s ease-in;
+    transition: all 0.45s ease-in;
+
+
+    @media(min-width: $screen-md){
+        height: $header-md;
+        background: rgba(#31798f,0.95);
+
+    }
+    h3{
+        color: white;
+        text-transform: uppercase;
+        font-size: 2.2rem;
+    }
+
+    &.small{
+        height: $header-xs-small;
+        background: rgba(#31798f,1);
+        .menu-options{
+            height: 200px;
+            @media(min-width: $screen-sm){
+                height: $header-lg-small;
+            }
+            &.closed{
+                height: 0;
+                @media(min-width: $screen-sm){
+                    height: auto;
+                }
+
+            }
+        }
+
+    }
+    .menu-mobile-icon{
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+        padding: 11px 0;
+        .mobile-menu{
+            height: 2px;
+            width: 35px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            background: rgba(deepskyblue,0.9);
+            cursor: pointer;
+            position: relative;
+            cursor: pointer;
+
+            -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in;
+
+            &:before,
+            &:after{
+                position: absolute;
+                height: 2px;
+                width: 35px;
+                box-shadow: 0 1px 2px 0 rgba(black, 0.5);
+                background: rgba(deepskyblue,1);
+                content: "";
+                top: -11px;
+
+                -webkit-transition: all 0.25s ease-out;
+                transition: all 0.25s ease-out;
+            }
+            &:after{
+                top: 11px;
+            }
+
+            &.close{
+
+                background: lightgoldenrodyellow;
+                box-shadow: none;
+                opacity: 0.75;
+
+                -ms-transform: rotate(45deg); /* IE 9 */
+                    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                            transform: rotate(45deg);
+
+                -webkit-transition: all 0.25s ease-out;
+                transition: all 0.25s ease-out;
+
+                &:before,
+                &:after{
+                    background: rgba(lightgoldenrodyellow, 1);
+                    box-shadow: none;
+                    top: 0;
+
+                    -ms-transform: rotate(-90deg); /* IE 9 */
+                        -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+                        transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    .menu-options{
+        background: rgba(0, 112, 155, 1);
+        left: 0;
+        display: flex;
+        height: 230px;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 0  ; 
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        width: 100%;
+
+        -webkit-transition: all 0.35s ease-out;
+        transition: all 0.35s ease-out;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12), inset 0 2px 5px 0 rgba(0, 0, 0, 0.16), inset 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+        a{
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+
+        }
+        &.closed{
+            height: 0;
+            padding: 0;
+            // left: 100%;
+            -webkit-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+            @media(min-width: $screen-sm){
+                height: $header-xs;
+            }
+        }
+        
+        @media(min-width: $screen-sm){
+            position: relative;
+            flex-direction: row;
+            background: transparent;
+            top: 0;
+            right: 0;
+            box-shadow: none;
+            height: $header-xs;
+            width: auto;
+            &.closed{
+                height: auto;
+            }
+            a{
+                color: papayawhip;
+                font-size: 1.4rem;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                font-weight: 200;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+    
+}

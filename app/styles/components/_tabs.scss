@@ -2,19 +2,27 @@
 
 .nav-sidebar { 
     width: 100%;
-    padding: 30px 0; 
     border-right: 1px solid #ddd;
+    @media(min-width: $screen-md){
+        padding: 30px 0; 
+    }
     .nav{
         display: flex;
         flex-direction:row;
         flex-wrap: wrap;
         font-size: 1.5rem;
         justify-content:center;
-        li >  a{
-            padding: 20px;
-        }
+        margin-top: 20px;
+
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 3px 8px 0 rgba(0, 0, 0, 0.03);
+        background: chocolate;
+        padding: 10px 20px 20px; 
         @media(min-width: $screen-md){
             flex-direction:column;
+
+            box-shadow: none;
+            background: transparent;
+            padding: 0; 
             li{
                 cursor: pointer;
                 background: transparent;
@@ -36,6 +44,25 @@
                 }
             }
         }
+        li >  a{
+            color: white;
+            padding: 5px 20px;
+            margin: 10px 5px 0;
+            background: rgba(black,0.15);
+            -webkit-transition: all 0.08s linear;
+            -moz-transition: all 0.08s linear;
+            -o-transition: all 0.08s linear;
+            transition: all 0.08s linear;
+            &:hover{
+                background: rgba(black,0.35);
+            }
+            @media(min-width: $screen-md){
+                padding: 10px 20px;
+                margin: 0;
+                background: transparent;
+                color: black;
+            }
+        }
     }
 }
 .nav-sidebar .text-overflow a,
@@ -44,4 +71,17 @@
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis; 
+}
+
+.tab-content{
+    padding: 15px 15px;
+    box-shadow: inset 2px 1px 15px 8px rgba(0, 0, 0, 0.05), inset 0 0px 5px 0px rgba(0, 0, 0, 0.08);
+    @media(min-width: $screen-md){
+
+        padding: 0;
+        box-shadow: none;
+    }
+    h2{
+        line-height: 1;
+    }
 }

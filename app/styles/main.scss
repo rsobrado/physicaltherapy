@@ -19,10 +19,15 @@ $icon-font-path: '../fonts/';
 body{
     font-size: 1.4rem;
     font-weight: 300;
-
+    letter-spacing: 1px;
+    text-shadow: 1px 0 2px rgba(black,0.15);
     @media(min-width: $screen-md){
         padding-top: 80px;
         font-size: 1.6rem;
+    }
+    p{
+        text-shadow: none;
+
     }
 }
 
@@ -42,6 +47,7 @@ legend{
 
 
 }
+
 video { 
     position: absolute;
     top: -40px;
